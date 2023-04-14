@@ -11,10 +11,10 @@ import java.io.InputStream
 
 class MainActivity : AppCompatActivity() {
 
-        private lateinit var myAppbar: Toolbar
-        private lateinit var listView: ListView
-        private lateinit var adapter: UserAdapter
-        private lateinit var users: ArrayList<User>
+    private lateinit var myAppbar: Toolbar
+    private lateinit var listView: ListView
+    private lateinit var adapter: UserAdapter
+    private lateinit var users: ArrayList<User>
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -52,12 +52,12 @@ class MainActivity : AppCompatActivity() {
             for (i in 0 until jsonArray.length()) {
                 val jsonObj = jsonArray.getJSONObject(i)
 
-                val firstname: String = jsonObj.getString("firstName")
-                val lastname: String = jsonObj.getString("lastName")
+                val firstName: String = jsonObj.getString("firstName")
+                val lastName: String = jsonObj.getString("lastName")
                 val email: String = jsonObj.getString("email")
                 val dob: Int = jsonObj.getInt("dob")
 
-                val user = User(firstname, lastname, email, dob)
+                val user = User(firstName, lastName, email, dob)
 
                 users.add(user)
             }
