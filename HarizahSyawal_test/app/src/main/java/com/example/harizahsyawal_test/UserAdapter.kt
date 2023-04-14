@@ -43,7 +43,7 @@ class UserAdapter internal constructor(private val context: Context) : BaseAdapt
 
         fun bind(user: User) {
             firstName?.text = user.firstName
-            lastName?.text = user.lastname
+            lastName?.text = user.lastName
             email?.text = user.email
             dob?.text = user.dob.toString()
         }

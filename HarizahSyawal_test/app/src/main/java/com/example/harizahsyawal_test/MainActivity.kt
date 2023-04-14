@@ -1,7 +1,9 @@
 package com.example.harizahsyawal_test
 
+import android.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
 import android.widget.AdapterView
 import android.widget.ListView
 import android.widget.Toast
@@ -33,7 +35,6 @@ class MainActivity : AppCompatActivity() {
         }
 
         myAppbar = findViewById(R.id.app_bar)
-        myAppbar.title = "Contact"
         setSupportActionBar(myAppbar)
     }
 
@@ -66,6 +67,11 @@ class MainActivity : AppCompatActivity() {
         }
 
         return users
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.toolbar_menu, menu)
+        return true
     }
 
 
