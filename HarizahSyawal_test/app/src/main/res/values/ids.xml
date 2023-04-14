@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="list_firstname" type="id" />
+    <item name="list_lastname" type="id" />
+    <item name="list_email" type="id" />
+    <item name="list_dob" type="id" />
+</resources>
